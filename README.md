@@ -9,6 +9,7 @@ conda activate comfy
 cd ComfyUI/sd35_exe
 pip install -r requirements.txt
 ```
+安裝pytorch可能會遇到cuda版本不相符的問題，出現問題可以到[pytorch](https://pytorch.org/get-started/locally/)找適合的pytorch版本
 
 到stable diffusion 3.5的hugging face 安裝stable diffusion model。  
 1. if you don't have a ssh key on hugging face:  
@@ -28,7 +29,7 @@ pip install -r requirements.txt
 
 ## 執行ComfyUI workflow
 ```text
-1. python main.py # 把ComfyUI開啟，不要關掉
+1. python main.py # 把ComfyUI打開，不要關掉
 2. cd sd35_exe
 3. Paul_apicall.py
 ```
