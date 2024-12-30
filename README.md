@@ -33,9 +33,10 @@ cd ComfyUI/sd35_exe
 
 ## 執行ComfyUI workflow
 ```text
-1. python main.py # 到"/ComfyUI_Paul"把ComfyUI打開，不要關掉
-2. cd sd35_exe # 到"/ComfyUI_Paul/sd35_exe"
-3. conda activate comfy
+1. conda activate comfy
+2. python main.py # 到"/ComfyUI_Paul"把ComfyUI打開，不要關掉
+# 再開一個ternimal
+3. cd sd35_exe # 到"/ComfyUI_Paul/sd35_exe"
 4. python Paul_apicall.py
 ```
 
