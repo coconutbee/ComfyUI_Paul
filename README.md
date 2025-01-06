@@ -9,11 +9,9 @@ conda activate comfy
 cd ComfyUI_Paul/sd35_exe
 ```
 ## 安裝pytorch
-```text
 1. 可以到[pytorch](https://pytorch.org/get-started/locally/)找適合的pytorch版本
 2. 如果CUDA版本比較舊可以到[pytorch_previous](https://pytorch.org/get-started/previous-versions/)找適合的pytorch版本
 3. 完成以上步驟後run: pip install -r requirements.txt
-```
 
 到stable diffusion 3.5的hugging face 安裝stable diffusion model。  
 1. if you don't have a ssh key on hugging face:  
