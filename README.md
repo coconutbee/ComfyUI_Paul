@@ -9,9 +9,16 @@ conda activate comfy
 cd ComfyUI_Paul/sd35_exe
 ```
 ## 安裝pytorch
+### 方法一
+pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+### 方法二(自行安裝)
 1. 可以到[pytorch](https://pytorch.org/get-started/locally/)找適合的pytorch版本
 2. 如果CUDA版本比較舊可以到[pytorch_previous](https://pytorch.org/get-started/previous-versions/)找適合的pytorch版本
-3. 完成以上步驟後run: pip install -r requirements.txt
+
+## 安裝requirements
+```text
+pip install -r requirements.txt
+```
 
 ## 下載stable diffusion model
 到[stable diffusion 3.5的hugging face](https://huggingface.co/stabilityai/stable-diffusion-3.5-medium)安裝stable diffusion model。  
