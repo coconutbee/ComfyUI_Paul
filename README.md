@@ -10,7 +10,9 @@ cd ComfyUI_Paul/sd35_exe
 ```
 ## 安裝pytorch
 ### 方法一
+```python
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+```
 ### 方法二(自行安裝)
 1. 可以到[pytorch](https://pytorch.org/get-started/locally/)找適合的pytorch版本
 2. 如果CUDA版本比較舊可以到[pytorch_previous](https://pytorch.org/get-started/previous-versions/)找適合的pytorch版本
