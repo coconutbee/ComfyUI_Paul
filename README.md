@@ -22,13 +22,13 @@ cd ComfyUI_Paul/sd35_exe
 2. git lfs install  
 3. git clone git@hf.co:stabilityai/stable-diffusion-3.5-medium
 
-## 下載與CLIP、T5 embedding model  
+## 下載CLIP、T5 embedding model  
 1. 安裝[openai-CLIP L](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/blob/main/text_encoders/clip_l.safetensors)
 2. 安裝[openai-CLIP G](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/blob/main/text_encoders/clip_g.safetensors)
 3. 安裝[t5xxl_fp16.safetensors](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/blob/main/text_encoders/t5xxl_fp16.safetensors)
 4. 安裝[t5xxl_fp8_e4m3fn.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/t5xxl_fp8_e4m3fn.safetensors)  
 
-## 將下載完的model移動到指定路徑
+## 將下載的model移動到指定路徑
 1. 把sd3.5_medium.safetensor放到 /ComfyUI_Paul/models/checkpoints
 2. 把CLIP與T5模型都放到 /ComfyUI_Paul/models/clip
 
