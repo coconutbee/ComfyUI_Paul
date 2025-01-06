@@ -6,7 +6,7 @@ conda create -n comfy python=3.10
 ```
 ```text
 conda activate comfy
-cd ComfyUI/sd35_exe
+cd ComfyUI_Paul/sd35_exe
 ```
 ## 安裝pytorch
 ```text
