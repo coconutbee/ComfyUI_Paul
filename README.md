@@ -1,7 +1,8 @@
 # ComfyUI 架設
 
-```text
+
 [git clone https://github.com/comfyanonymous/ComfyUI.git](https://github.com/coconutbee/ComfyUI_Paul.git)
+```text
 conda create -n comfy python=3.10
 ```
 ```text
