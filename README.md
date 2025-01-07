@@ -38,7 +38,7 @@ cd ComfyUI_Paul/sd35_exe
    ```bash
    nano ~/.bashrc
    ```
-6. paste:
+6. Paste the following code at the bottom of the file:
    ```nano
    export HF_API_TOKEN=<token_you_copied>
    ```
