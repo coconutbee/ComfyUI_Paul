@@ -44,8 +44,9 @@ cd ComfyUI_Paul/sd35_exe
    ```
    then press **"Ctrl + X" -> "Y" -> "Enter"**
 7. in command line:
-   ```source ~/.bashrc
-
+   ```bash
+   source ~/.bashrc
+   ```
 ### install everything
 1. 安裝[openai-CLIP L](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/blob/main/text_encoders/clip_l.safetensors)
 2. 安裝[openai-CLIP G](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/blob/main/text_encoders/clip_g.safetensors)
