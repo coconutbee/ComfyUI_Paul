@@ -29,17 +29,45 @@ pip install -r requirements.txt
    2.  cat ~/.ssh/id_rsa.pub # copy the content starting with "ssh-rsa" till the end  
    3.  paste your key on "SSH & GPG Keys" -> 路徑:"頭像" ->  "SSH and GPG Keys" 
 2. git lfs install  
-3. git clone git@hf.co:stabilityai/stable-diffusion-3.5-medium
+3.
+   ```python
+   cd ../models/checkpoints
+   git clone git@hf.co:stabilityai/stable-diffusion-3.5-medium
+   cd ../clip
+   ```
 
-## 下載CLIP、T5 embedding model  
+## 下載CLIP、T5 embedding model
+### 在huggingface申請access token
+[Access Tokens link here](https://huggingface.co/settings/tokens)
+1. press "Create new token" botton
+2. Enter "Token name"
+3. turn on everything at "User permissions" section below.
+4. Press the "Copy" botton.
+5. in command line:
+   ```bash
+   nano ~/.bashrc
+   ```
+6. Paste the following code at the bottom of the file:
+   ```nano
+   export HF_API_TOKEN=<token_you_copied>
+   ```
+   then press **"Ctrl + X" -> "Y" -> "Enter"**
+7. in command line:
+   ```bash
+   source ~/.bashrc
+   ```
+### install everything
 1. 安裝[openai-CLIP L](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/blob/main/text_encoders/clip_l.safetensors)
 2. 安裝[openai-CLIP G](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/blob/main/text_encoders/clip_g.safetensors)
 3. 安裝[t5xxl_fp16.safetensors](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/blob/main/text_encoders/t5xxl_fp16.safetensors)
-4. 安裝[t5xxl_fp8_e4m3fn.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/t5xxl_fp8_e4m3fn.safetensors)  
-
-## 將下載的model移動到指定路徑
-1. 把sd3.5_medium.safetensor放到 /ComfyUI_Paul/models/checkpoints
-2. 把CLIP與T5模型都放到 /ComfyUI_Paul/models/clip
+4. 安裝[t5xxl_fp8_e4m3fn.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/t5xxl_fp8_e4m3fn.safetensors)
+   ※注意: 你目前資料夾路徑為"ComfyUI_Paul/models/clip/"
+```python
+wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/text_encoders/clip_l.safetensors
+wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/text_encoders/clip_g.safetensors
+wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/text_encoders/t5xxl_fp16.safetensors
+wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors
+```
 
 ## 執行ComfyUI workflow
 ```text
