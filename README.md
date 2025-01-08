@@ -62,13 +62,18 @@ pip install -r requirements.txt
 3. 安裝[t5xxl_fp16.safetensors](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/blob/main/text_encoders/t5xxl_fp16.safetensors)
 4. 安裝[t5xxl_fp8_e4m3fn.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/t5xxl_fp8_e4m3fn.safetensors)
    ※注意: 你目前資料夾路徑為"ComfyUI_Paul/models/clip/"
-```python
-wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/text_encoders/clip_l.safetensors
-wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/text_encoders/clip_g.safetensors
-wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/text_encoders/t5xxl_fp16.safetensors
-wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors
-```
-
+   ```python
+   wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/text_encoders/clip_l.safetensors
+   wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/text_encoders/clip_g.safetensors
+   wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large/resolve/main/text_encoders/t5xxl_fp16.safetensors
+   wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors
+   ```
+   
+6. 安裝[canny edge](https://huggingface.co/stabilityai/stable-diffusion-3.5-large-controlnet-canny/resolve/main/diffusion_pytorch_model.safetensors)
+   ```python
+   cd ../controlnet
+   wget --header="Authorization: Bearer $HF_API_TOKEN" https://huggingface.co/stabilityai/stable-diffusion-3.5-large-controlnet-canny/resolve/main/diffusion_pytorch_model.safetensors
+   ```
 ## 執行ComfyUI workflow
 ```text
 1. conda activate comfy
