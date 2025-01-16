@@ -29,7 +29,7 @@ def get_history(prompt_id):
 def get_images(ws, prompt, name):
     prompt_id = queue_prompt(prompt)['prompt_id']
     output_images = {}
-    output_folder = "data_add/cfpfp"  # 這裡可依需求改你的輸出資料夾
+    output_folder = "data_add/ICIP_cplfw_sd35"  # 這裡可依需求改你的輸出資料夾
     os.makedirs(output_folder, exist_ok=True)
     
     # 等待後端執行完畢
@@ -56,7 +56,7 @@ def get_images(ws, prompt, name):
         if 'images' in node_output:
             for image in node_output['images']:
                 # 為了保證每張圖都有獨特名稱，你可以加上 seed 或其他資訊
-                image_name = f"cfpfp_{name}_node31.png"
+                image_name = f"cplfw_{name}.png"
                 filepath = os.path.join(output_folder, image_name)
 
                 image_data = get_image(image['filename'], image['subfolder'], image['type'])
@@ -79,11 +79,11 @@ with open("sd35_i2i_canny.json", "r", encoding="utf-8") as f:
 
 prompt = json.loads(prompt_text)
 
-prompt_folder = "/media/avlab/reggie/Paul_sd35/3DDFA_V2/prompt_generator/cvpr2025_false_pair/cfpfp_false"
+prompt_folder = "/media/avlab/reggie/Paul_sd35/ComfyUI_Paul/sd35_exe/ICIP2025/cplfw_false"
 for current_root, dirs, files in os.walk(prompt_folder):
     for file_name in files:
         txt_path = os.path.join(current_root, file_name)
-        img_path = txt_path.replace("cfpfp_false", "cfpfp_front_17deg").replace(".txt", ".png")
+        img_path = txt_path.replace("cplfw_false", "cplfw_17deg").replace(".txt", ".png")
         
         with open(txt_path, "r", encoding="utf-8") as f:
             prompt_content = f.read()
@@ -91,7 +91,7 @@ for current_root, dirs, files in os.walk(prompt_folder):
         
         # 設定 prompt 內容
         prompt["6"]["inputs"]["text"] = prompt_content
-        seed = random.randint(0, 4294967295)
+        seed = 50
         prompt["3"]["inputs"]["seed"] = seed
         prompt["24"]["inputs"]["image"] = img_path
         
